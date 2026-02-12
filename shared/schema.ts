@@ -1,7 +1,36 @@
 import { sql } from "drizzle-orm";
-import { pgTable, text, varchar } from "drizzle-orm/pg-core";
+import {
+  pgTable,
+  text,
+  varchar,
+  serial,
+  timestamp,
+} from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
+
+export const landingLeads = pgTable("landing_leads", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  email: text("email").notNull(),
+  company: text("company").notNull(),
+  role: text("role"),
+  phone: text("phone"),
+  message: text("message"),
+  source: text("source").notNull().default("landing"),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+export const insertLandingLeadSchema = createInsertSchema(landingLeads).omit({
+  id: true,
+  createdAt: true,
+});
+
+export type LandingLead = typeof landingLeads.$inferSelect;
+export type InsertLandingLead = z.infer<typeof insertLandingLeadSchema>;
+
+export type CreateLandingLeadRequest = InsertLandingLead;
+export type LandingLeadResponse = LandingLead;
 
 export const users = pgTable("users", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
