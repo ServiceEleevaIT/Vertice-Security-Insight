@@ -1,26 +1,18 @@
-import { db } from "./db";
-import {
-  landingLeads,
-  type CreateLandingLeadRequest,
-  type LandingLeadResponse,
-} from "@shared/schema";
-
 export interface IStorage {
-  getLeads(): Promise<LandingLeadResponse[]>;
-  createLead(input: CreateLandingLeadRequest): Promise<LandingLeadResponse>;
+  // No-op storage
+  getLeads(): Promise<any[]>;
+  createLead(input: any): Promise<any>;
 }
 
-export class DatabaseStorage implements IStorage {
-  async getLeads(): Promise<LandingLeadResponse[]> {
-    return await db.select().from(landingLeads);
+export class MemStorage implements IStorage {
+  async getLeads(): Promise<any[]> {
+    return [];
   }
 
-  async createLead(
-    input: CreateLandingLeadRequest,
-  ): Promise<LandingLeadResponse> {
-    const [created] = await db.insert(landingLeads).values(input).returning();
-    return created;
+  async createLead(input: any): Promise<any> {
+    console.log("Lead received (in-memory):", input);
+    return { ...input, id: Math.random(), createdAt: new Date() };
   }
 }
 
-export const storage = new DatabaseStorage();
+export const storage = new MemStorage();

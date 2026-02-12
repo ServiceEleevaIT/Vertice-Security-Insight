@@ -4,33 +4,6 @@ import { storage } from "./storage";
 import { api } from "@shared/routes";
 import { z } from "zod";
 
-async function seedDatabase() {
-  const existing = await storage.getLeads();
-  if (existing.length > 0) return;
-
-  await storage.createLead({
-    name: "Mariana Souza",
-    email: "mariana.souza@exemplo.com",
-    company: "Grupo Horizonte",
-    role: "Gerente de Operações de TI",
-    phone: "+55 11 99999-0000",
-    message:
-      "Gostaria de entender como o VERTICE unifica dados de Zabbix e Dynatrace e como funciona o enriquecimento via CMDB.",
-    source: "seed",
-  });
-
-  await storage.createLead({
-    name: "Rafael Lima",
-    email: "rafael.lima@exemplo.com",
-    company: "Fintech Aurora",
-    role: "SRE",
-    phone: "+55 21 98888-1111",
-    message:
-      "Temos incidentes recorrentes e queremos reduzir MTTR com correlação e insights preditivos.",
-    source: "seed",
-  });
-}
-
 export async function registerRoutes(
   httpServer: Server,
   app: Express,
@@ -51,8 +24,6 @@ export async function registerRoutes(
       return res.status(500).json({ message: "Internal error" });
     }
   });
-
-  await seedDatabase();
 
   return httpServer;
 }
