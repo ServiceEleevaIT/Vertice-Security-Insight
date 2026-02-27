@@ -1,0 +1,343 @@
+{
+    "seo": {
+        "title": "VERTICE | Centralized Observability",
+        "description": "Transforming Observability into Competitive and Economic Advantage. Unify ingestion, CMDB context, and intelligent analysis with AI."
+    },
+    "nav": {
+        "problem": "Problem",
+        "pillars": "Pillars",
+        "howItWorks": "How it works",
+        "faq": "FAQ",
+        "telemetry": "Telemetry",
+        "correlation": "Correlation",
+        "ai": "AI",
+        "speakToSpecialist": "Talk to a specialist",
+        "scheduleDemo": "Schedule demo",
+        "demo": "Demo"
+    },
+    "hero": {
+        "badge": "Operational Security • Centralized Observability • AI Applied",
+        "title": "VERTICE",
+        "subtitle": "Transforming Observability into Competitive Advantage",
+        "text": "Unify telemetry (logs, metrics, and traces), apply business context via CMDB, and anticipate incidents with intelligent analytics — to reduce noise, costs, and MTTR without losing visibility.",
+        "ctaDemo": "Schedule demo",
+        "ctaSpecialist": "Talk to specialist",
+        "ctaLearn": "Understand the solution",
+        "pillrisk": "Less risk",
+        "pillmttr": "Lower MTTR",
+        "pillcorrelation": "Correlation",
+        "pillai": "Applied AI",
+        "dashboard": {
+            "title": "Observability Dashboard (Executive View)",
+            "status": "Healthy",
+            "criticalIncidents": "Critical Incidents",
+            "correlatedSignals": "Correlated Signals",
+            "noiseEliminated": "Noise Eliminated",
+            "last24h": "Last 24 hours",
+            "ingestion": "Ingestion",
+            "ingestionSub": "OTel • Telegraf • Beats",
+            "context": "Context",
+            "contextSub": "CMDB + Business",
+            "ai": "AI",
+            "aiSub": "Predictive + Actionable",
+            "governance": "Governance",
+            "governanceSub": "Costs + Compliance",
+            "seeInAction": "Want to see this in your environment?",
+            "schedule": "Schedule"
+        },
+        "note": "* Conceptual illustration to communicate benefits and flows. Integration and metrics vary by scenario."
+    },
+    "problem": {
+        "eyebrow": "The Real Challenge",
+        "title": "Fragmented tools become expensive incidents",
+        "description": "When each layer observes “in its own way,” correlation becomes slow, noise grows, and prioritization becomes guesswork.",
+        "p1": "Modern environments combine legacy and cloud-native. It is common to see Zabbix, Dynatrace, AppDynamics, Oracle EM, plus solutions from each provider — all coexisting.",
+        "p2": "The result: multiple dashboards, conflicting alerts, and a long investigation chain. MTTR increases, downtime costs explode, and decisions become reactive.",
+        "chips": [
+            "Zabbix",
+            "Dynatrace",
+            "AppDynamics",
+            "Oracle EM",
+            "Cloud Native",
+            "Isolated Logs"
+        ],
+        "metrics": {
+            "downtime": {
+                "label": "Average Downtime Cost",
+                "value": "$5,600 / min",
+                "supporting": "Outages cost more than infrastructure: impact on revenue, reputation, and compliance."
+            },
+            "reduction": {
+                "label": "Potential Reduction",
+                "value": "up to 50%",
+                "supporting": "With correlation, context, and automation — fewer incidents and faster containment."
+            },
+            "speed": {
+                "label": "Response Speed",
+                "value": "up to 40%",
+                "supporting": "Shorter diagnosis by merging signals and prioritizing by business impact."
+            }
+        },
+        "card": {
+            "text": "Symptom: too many alerts. Cause: little correlation.",
+            "subtext": "VERTICE centralizes ingestion, aggregates context, and applies intelligent analysis to turn telemetry into decisions — with governance and efficiency.",
+            "ctaPillars": "See pillars",
+            "ctaMap": "Map scenario"
+        }
+    },
+    "pillars": {
+        "eyebrow": "The Solution",
+        "title": "3 pillars for centralized observability — from data to impact",
+        "description": "Unified ingestion, context via CMDB, and intelligent analysis with AI/ML/LLMs. Less noise, more decision.",
+        "p1": {
+            "title": "1) Unified and Dynamic Ingestion",
+            "description": "Collect signals from any source, normalize, and distribute with governance — without vendor lock-in.",
+            "bullets": [
+                "Visual pipeline with GUI",
+                "Support for OpenTelemetry, Telegraf, Beats",
+                "Proprietary agents when necessary"
+            ]
+        },
+        "p2": {
+            "title": "2) Enrichment via CMDB",
+            "description": "Telemetry without context becomes noise. With CMDB, each signal gains business meaning.",
+            "bullets": [
+                "Service → component → owner → criticality relationship",
+                "Intelligent incident prioritization",
+                "Reports and efficient allocation"
+            ]
+        },
+        "p3": {
+            "title": "3) Intelligent Analysis (AI/ML/LLMs)",
+            "description": "Detect patterns, anticipate risks, and generate actionable recommendations — with transparency and traceability.",
+            "bullets": [
+                "Predictive insights and more accurate alerts",
+                "Summaries and explainability by context",
+                "Playbooks and remediation suggestions"
+            ]
+        },
+        "ctaDemo": "Schedule demo",
+        "ctaHow": "See how it works"
+    },
+    "howItWorks": {
+        "eyebrow": "Workflow Details",
+        "title": "From raw data to diagnosis with context",
+        "description": "An observability architecture that respects your ecosystem and continuously improves accuracy.",
+        "steps": {
+            "s1": {
+                "title": "Capture and Normalization",
+                "desc": "Collect from multiple sources (OTel/Telegraf/Beats/agents) and normalize into a common model."
+            },
+            "s2": {
+                "title": "Visual Pipeline and Governance",
+                "desc": "Orchestrate routes, filters, and enrichments with version control and flow visibility."
+            },
+            "s3": {
+                "title": "CMDB + Business Enrichment",
+                "desc": "Add owner, criticality, dependencies, and SLA per service — to prioritize with impact."
+            },
+            "s4": {
+                "title": "Correlation and AI",
+                "desc": "Combine signals and generate insights: probable root cause, patterns, and recommended next steps."
+            }
+        },
+        "benefits": {
+            "eyebrow": "Benefits of CMDB + Context",
+            "badge": "flow 1–4",
+            "b1": {
+                "title": "Intelligent Prioritization",
+                "desc": "Incidents stop being 'just another alert' and become 'impact on service X'."
+            },
+            "b2": {
+                "title": "Efficient Allocation",
+                "desc": "Routing by owner, criticality, and dependency reduces handoffs and dead time."
+            },
+            "b3": {
+                "title": "Reliable Reporting",
+                "desc": "Indicators and costs per service and unit — with traceability."
+            }
+        },
+        "card": {
+            "title": "Ready to reduce noise and cost?",
+            "subtitle": "A demo focused on your scenario — without generic presentations.",
+            "cta": "Schedule"
+        },
+        "note": "Note: CMDB can integrate with existing sources or be consolidated with progressive governance.",
+        "integrations": {
+            "title": "Open Integrations",
+            "desc": "OpenTelemetry-first, with connectors when necessary."
+        },
+        "security": {
+            "title": "Security and Audit",
+            "desc": "Governance per flow, with traceability and controls."
+        }
+    },
+    "faq": {
+        "eyebrow": "Frequently Asked Questions",
+        "title": "Common questions\n(with objective answers)",
+        "description": "If you are comparing tools or trying to escape fragmentation, here is what is most asked.",
+        "q1": {
+            "q": "Does VERTICE replace my current tools?",
+            "a": "It can coexist and unify ingestion/correlation, reducing redundancies. The path is incremental: we integrate, measure gains, and then decide on consolidation safely."
+        },
+        "q2": {
+            "q": "How does it handle hybrid environments (legacy + cloud)?",
+            "a": "With connectors and agents (open standards like OpenTelemetry, Telegraf, Beats) and normalization strategy. The goal is to have a 'common model' of signals, regardless of origin."
+        },
+        "q3": {
+            "q": "What is the role of CMDB in observability?",
+            "a": "It provides context: owner, criticality, dependencies, and business impact. This improves routing, prioritization, and reporting — reducing time lost investigating."
+        },
+        "q4": {
+            "q": "Is AI here 'magic' or explainable?",
+            "a": "The focus is on actionable and traceable insights: correlation, summary, cause suggestion, and next steps based on context and signal evidence."
+        },
+        "q5": {
+            "q": "How do I start without a long project?",
+            "a": "With a result-oriented pilot: we select critical services, unify ingestion, add context, and measure noise reduction and MTTR in weeks."
+        },
+        "sidebar": {
+            "title": "Let's design your 'future state'",
+            "text": "A technical conversation to map tools, costs, noise, and goals. Leave with an incremental and measurable plan.",
+            "rows": {
+                "r1": {
+                    "title": "Quick Diagnosis",
+                    "desc": "Identify where fragmentation costs the most."
+                },
+                "r2": {
+                    "title": "Pilot Plan",
+                    "desc": "Goals: noise, MTTR, cost, and governance."
+                },
+                "r3": {
+                    "title": "Next Steps",
+                    "desc": "Integrations and measurable success."
+                }
+            },
+            "ctaSchedule": "Schedule now",
+            "ctaBack": "Review problem"
+        }
+    },
+    "finalCta": {
+        "title": "Observability that respects",
+        "highlight": "security, context, and results",
+        "text": "Stop 'putting out fires' with disconnected data. Centralize telemetry, connect with the business, and use AI to act before impact.",
+        "ctaDemo": "Schedule demo",
+        "ctaSpecialist": "Talk to specialist",
+        "pills": {
+            "ingestion": {
+                "title": "Unified Ingestion",
+                "desc": "OTel/Telegraf/Beats + connectors"
+            },
+            "cmdb": {
+                "title": "CMDB + Context",
+                "desc": "Impact and prioritization by service"
+            },
+            "ai": {
+                "title": "Applied AI",
+                "desc": "Actionable and predictive insights"
+            }
+        },
+        "note": "Security and observability go together: visibility with governance and fast decisions with context."
+    },
+    "footer": {
+        "logo": {
+            "subtitle": "Centralized Observability"
+        },
+        "text": "Transforming telemetry into operational clarity: less noise, more context, fast and reliable decisions.",
+        "backToTop": "Back to top",
+        "nav": {
+            "title": "Navigation",
+            "links": {
+                "problem": "Problem",
+                "pillars": "Pillars",
+                "howItWorks": "How it works",
+                "faq": "FAQ",
+                "privacy": "Privacy"
+            }
+        },
+        "contact": {
+            "title": "Contact",
+            "site": "Institutional Website"
+        },
+        "copyright": "All rights reserved.",
+        "tags": "Security • Reliability • Observability"
+    },
+    "lead": {
+        "heroDemo": {
+            "title": "Schedule a demo",
+            "subtitle": "See the platform in action: ingestion, correlation, and insights with AI."
+        },
+        "heroSpecialist": {
+            "title": "Talk to a specialist",
+            "subtitle": "A technical and objective conversation to map current tools and quick wins."
+        },
+        "heroCard": {
+            "title": "Schedule demo",
+            "subtitle": "A short and objective session, focused on quick wins."
+        },
+        "problemMap": {
+            "title": "Map your scenario",
+            "subtitle": "Share current tools and goals. We suggest a technical and economic path."
+        },
+        "pillarsDemo": {
+            "title": "Schedule demo — VERTICE Pillars",
+            "subtitle": "Let's show the full flow: ingestion → context → correlation → decision."
+        },
+        "cmdbDemo": {
+            "title": "Schedule demo — CMDB & Context",
+            "subtitle": "Let's design the context and prioritization flow for your environment."
+        },
+        "faqDemo": {
+            "title": "Schedule demo — Next Steps",
+            "subtitle": "Let's map your scenario and suggest a pilot with clear metrics."
+        },
+        "finalDemo": {
+            "title": "Schedule demo — VERTICE",
+            "subtitle": "A short, guided, and technical session — focused on measurable gains."
+        },
+        "finalSpecialist": {
+            "title": "Talk to a specialist",
+            "subtitle": "Ask technical and business questions about the platform and adoption model."
+        },
+        "headerDemo": {
+            "title": "Schedule a demo",
+            "subtitle": "A guided walkthrough focused on results: downtime reduction, costs, and MTTR."
+        },
+        "headerSpecialist": {
+            "title": "Talk to a specialist",
+            "subtitle": "Tell us your pains: fragmentation, costs, correlation, and prioritization — we organize the path."
+        },
+        "form": {
+            "name": "Name *",
+            "namePlaceholder": "Your name",
+            "email": "Email *",
+            "emailPlaceholder": "you@company.com",
+            "company": "Company *",
+            "companyPlaceholder": "Company name",
+            "role": "Role (optional)",
+            "rolePlaceholder": "Ex: SRE, Infra, IT",
+            "phone": "Phone (optional)",
+            "phonePlaceholder": "+1 (555) 000-0000",
+            "source": "Source",
+            "message": "Message (optional)",
+            "messagePlaceholder": "Context: current tools, pains, goals, SLAs...",
+            "disclaimer": "By sending, you agree to receive contact about the demo and technical materials.",
+            "submit": "Send",
+            "sending": "Sending..."
+        },
+        "toast": {
+            "validation": {
+                "title": "Check required fields",
+                "description": "Name, email and company must be filled correctly."
+            },
+            "success": {
+                "title": "Received successfully",
+                "description": "Thank you! A specialist will contact you soon."
+            },
+            "error": {
+                "title": "Could not send",
+                "description": "Try again in a moment."
+            }
+        }
+    }
+}

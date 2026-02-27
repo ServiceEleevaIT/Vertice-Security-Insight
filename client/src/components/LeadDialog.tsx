@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -24,11 +25,12 @@ const fieldBase =
 export function LeadDialog({
   trigger,
   defaultSource = "landing",
-  title = "Agendar uma demo",
-  subtitle = "Conte um pouco sobre o seu cenário. Respondemos rápido — com contexto e próximos passos.",
+  title,
+  subtitle,
   open,
   onOpenChange,
 }: LeadDialogProps) {
+  const { t } = useTranslation();
   const controlled = typeof open === "boolean";
   const [internalOpen, setInternalOpen] = React.useState(false);
   const isOpen = controlled ? open : internalOpen;
@@ -57,10 +59,10 @@ export function LeadDialog({
 
   const onChange =
     (key: keyof typeof form) =>
-    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      const value = e.target.value;
-      setForm((p) => ({ ...p, [key]: value }));
-    };
+      (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const value = e.target.value;
+        setForm((p) => ({ ...p, [key]: value }));
+      };
 
   const canSubmit = form.name.trim().length >= 2 && form.company.trim().length >= 2 && form.email.includes("@");
 
@@ -68,8 +70,8 @@ export function LeadDialog({
     e.preventDefault();
     if (!canSubmit) {
       toast({
-        title: "Confira os campos obrigatórios",
-        description: "Nome, e-mail e empresa precisam estar preenchidos corretamente.",
+        title: t("lead.toast.validation.title"),
+        description: t("lead.toast.validation.description"),
         variant: "destructive",
       });
       return;
@@ -87,8 +89,8 @@ export function LeadDialog({
       });
 
       toast({
-        title: "Recebido com sucesso",
-        description: "Obrigado! Em breve um especialista entrará em contato.",
+        title: t("lead.toast.success.title"),
+        description: t("lead.toast.success.description"),
       });
 
       setForm({
@@ -103,8 +105,8 @@ export function LeadDialog({
       setOpen(false);
     } catch (err: any) {
       toast({
-        title: "Não foi possível enviar",
-        description: err?.message || "Tente novamente em instantes.",
+        title: t("lead.toast.error.title"),
+        description: err?.message || t("lead.toast.error.description"),
         variant: "destructive",
       });
     }
@@ -116,19 +118,21 @@ export function LeadDialog({
         <DialogTrigger asChild>{trigger}</DialogTrigger>
       ) : null}
 
-      <DialogContent className="max-w-xl overflow-hidden rounded-3xl border border-border/70 bg-background/70 p-0 shadow-2xl backdrop-blur-xl">
+      <DialogContent className="max-w-xl overflow-hidden rounded-3xl border border-border/70 bg-background/70 p-0 shadow-2xl backdrop-blur-xl max-h-[90vh] sm:max-h-[85vh] overflow-y-auto">
         <div className="relative">
           <div className="absolute inset-0 bg-mesh" />
           <div className="absolute inset-0 bg-grid opacity-50" />
-          <div className="noise-overlay relative p-6 sm:p-7">
+          <div className="noise-overlay relative p-5 sm:p-7">
             <DialogHeader>
               <div className="flex items-center gap-3">
                 <div className="grid h-11 w-11 place-items-center rounded-2xl border border-border/70 bg-card/40 shadow-sm">
                   <ShieldCheck className="h-5 w-5 text-primary" />
                 </div>
                 <div className="min-w-0">
-                  <DialogTitle className="font-display text-2xl">{title}</DialogTitle>
-                  <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{subtitle}</p>
+                  <DialogTitle className="font-display text-2xl">{title || t("lead.heroDemo.title")}</DialogTitle>
+                  <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                    {subtitle || t("lead.headerSpecialist.subtitle")}
+                  </p>
                 </div>
               </div>
             </DialogHeader>
@@ -136,24 +140,24 @@ export function LeadDialog({
             <form onSubmit={onSubmit} className="mt-6 space-y-4">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Nome *</Label>
+                  <Label htmlFor="name">{t("lead.form.name")}</Label>
                   <Input
                     id="name"
                     value={form.name}
                     onChange={onChange("name")}
-                    placeholder="Seu nome"
+                    placeholder={t("lead.form.namePlaceholder")}
                     className={fieldBase}
                     data-testid="input-name"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">E-mail *</Label>
+                  <Label htmlFor="email">{t("lead.form.email")}</Label>
                   <Input
                     id="email"
                     type="email"
                     value={form.email}
                     onChange={onChange("email")}
-                    placeholder="voce@empresa.com"
+                    placeholder={t("lead.form.emailPlaceholder")}
                     className={fieldBase}
                     data-testid="input-email"
                   />
@@ -162,23 +166,23 @@ export function LeadDialog({
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="company">Empresa *</Label>
+                  <Label htmlFor="company">{t("lead.form.company")}</Label>
                   <Input
                     id="company"
                     value={form.company}
                     onChange={onChange("company")}
-                    placeholder="Nome da empresa"
+                    placeholder={t("lead.form.companyPlaceholder")}
                     className={fieldBase}
                     data-testid="input-company"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="role">Cargo (opcional)</Label>
+                  <Label htmlFor="role">{t("lead.form.role")}</Label>
                   <Input
                     id="role"
                     value={form.role}
                     onChange={onChange("role")}
-                    placeholder="Ex.: SRE, Infra, TI"
+                    placeholder={t("lead.form.rolePlaceholder")}
                     className={fieldBase}
                     data-testid="input-role"
                   />
@@ -187,18 +191,18 @@ export function LeadDialog({
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="phone">Telefone (opcional)</Label>
+                  <Label htmlFor="phone">{t("lead.form.phone")}</Label>
                   <Input
                     id="phone"
                     value={form.phone}
                     onChange={onChange("phone")}
-                    placeholder="+55 (11) 9xxxx-xxxx"
+                    placeholder={t("lead.form.phonePlaceholder")}
                     className={fieldBase}
                     data-testid="input-phone"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="source">Origem</Label>
+                  <Label htmlFor="source">{t("lead.form.source")}</Label>
                   <Input
                     id="source"
                     value={form.source}
@@ -211,12 +215,12 @@ export function LeadDialog({
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message">Mensagem (opcional)</Label>
+                <Label htmlFor="message">{t("lead.form.message")}</Label>
                 <Textarea
                   id="message"
                   value={form.message}
                   onChange={onChange("message")}
-                  placeholder="Contexto: ferramentas atuais, dores, objetivos, SLAs..."
+                  placeholder={t("lead.form.messagePlaceholder")}
                   className={fieldBase + " min-h-[110px] resize-none"}
                   data-testid="input-message"
                 />
@@ -224,7 +228,7 @@ export function LeadDialog({
 
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div className="text-xs text-muted-foreground leading-relaxed">
-                  Ao enviar, você concorda em receber contato sobre a demo e materiais técnicos.
+                  {t("lead.form.disclaimer")}
                 </div>
 
                 <GlowButton
@@ -233,7 +237,7 @@ export function LeadDialog({
                   leftIcon={createLead.isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
                   data-testid="btn-submit-lead"
                 >
-                  {createLead.isPending ? "Enviando..." : "Enviar"}
+                  {createLead.isPending ? t("lead.form.sending") : t("lead.form.submit")}
                 </GlowButton>
               </div>
             </form>

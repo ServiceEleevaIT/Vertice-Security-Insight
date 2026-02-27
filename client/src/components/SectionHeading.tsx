@@ -32,7 +32,7 @@ export function SectionHeading({
         </div>
       ) : null}
 
-      <h2 className="font-display text-2xl sm:text-3xl md:text-4xl leading-[1.06]">
+      <h2 className="font-display text-3xl sm:text-4xl md:text-5xl leading-[1.04] tracking-tight whitespace-pre-line">
         {title}
       </h2>
 

@@ -1,0 +1,343 @@
+{
+    "seo": {
+        "title": "VERTICE | Observabilidade Centralizada",
+        "description": "Transformando a Observabilidade em Vantagem Competitiva e Econômica. Ingestão unificada, contexto via CMDB e análise inteligente com IA."
+    },
+    "nav": {
+        "problem": "Problema",
+        "pillars": "Pilares",
+        "howItWorks": "Como funciona",
+        "faq": "FAQ",
+        "telemetry": "Telemetria",
+        "correlation": "Correlação",
+        "ai": "IA",
+        "speakToSpecialist": "Falar com especialista",
+        "scheduleDemo": "Agendar demo",
+        "demo": "Demo"
+    },
+    "hero": {
+        "badge": "Segurança operacional • Observabilidade centralizada • IA aplicada",
+        "title": "VERTICE",
+        "subtitle": "Transformando a Observabilidade em Vantagem Competitiva",
+        "text": "Unifique telemetria (logs, métricas e traces), aplique contexto de negócio via CMDB e antecipe incidentes com análises inteligentes — para reduzir ruído, custos e MTTR sem perder visibilidade.",
+        "ctaDemo": "Agendar demo",
+        "ctaSpecialist": "Falar com especialista",
+        "ctaLearn": "Entender a solução",
+        "pillrisk": "Menos risco",
+        "pillmttr": "MTTR menor",
+        "pillcorrelation": "Correlação",
+        "pillai": "IA aplicada",
+        "dashboard": {
+            "title": "Painel de observabilidade (visão executiva)",
+            "status": "saudável",
+            "criticalIncidents": "Incidentes críticos",
+            "correlatedSignals": "Sinais correlacionados",
+            "noiseEliminated": "Ruído eliminado",
+            "last24h": "Últimas 24 horas",
+            "ingestion": "Ingestão",
+            "ingestionSub": "OTel • Telegraf • Beats",
+            "context": "Contexto",
+            "contextSub": "CMDB + negócio",
+            "ai": "IA",
+            "aiSub": "Preditivo + acionável",
+            "governance": "Governança",
+            "governanceSub": "Custos + compliance",
+            "seeInAction": "Quer ver isso no seu ambiente?",
+            "schedule": "Agendar"
+        },
+        "note": "* Ilustração conceitual para comunicar benefícios e fluxos. Integração e métricas variam por cenário."
+    },
+    "problem": {
+        "eyebrow": "O desafio real",
+        "title": "Ferramentas fragmentadas viram incidentes caros",
+        "description": "Quando cada camada observa “do seu jeito”, correlação fica lenta, o ruído cresce e a priorização vira adivinhação.",
+        "p1": "Ambientes modernos combinam legados e cloud nativa. É comum ver Zabbix, Dynatrace, AppDynamics, Oracle EM, além de soluções de cada provedor — tudo coexistindo.",
+        "p2": "O resultado: múltiplos painéis, alertas conflitantes e uma cadeia de investigação longa. O MTTR aumenta, o custo de indisponibilidade explode e decisões ficam reativas.",
+        "chips": [
+            "Zabbix",
+            "Dynatrace",
+            "AppDynamics",
+            "Oracle EM",
+            "Cloud nativa",
+            "Logs isolados"
+        ],
+        "metrics": {
+            "downtime": {
+                "label": "Custo médio de downtime",
+                "value": "US$ 5.600 / min",
+                "supporting": "Interrupções custam mais do que infraestrutura: impacto em receita, reputação e compliance."
+            },
+            "reduction": {
+                "label": "Redução potencial",
+                "value": "até 50%",
+                "supporting": "Com correlação, contexto e automação — menos incidentes e contenção mais rápida."
+            },
+            "speed": {
+                "label": "Rapidez de resposta",
+                "value": "até 40%",
+                "supporting": "Diagnóstico mais curto ao unir sinais e priorizar por impacto de negócio."
+            }
+        },
+        "card": {
+            "text": "Sintoma: muitos alertas. Causa: pouca correlação.",
+            "subtext": "A VERTICE centraliza ingestão, agrega contexto e aplica análise inteligente para transformar telemetria em decisões — com governança e eficiência.",
+            "ctaPillars": "Ver pilares",
+            "ctaMap": "Mapear cenário"
+        }
+    },
+    "pillars": {
+        "eyebrow": "A solução",
+        "title": "3 pilares para observabilidade centralizada — do dado ao impacto",
+        "description": "Ingestão unificada, contexto via CMDB e análise inteligente com IA/ML/LLMs. Menos ruído, mais decisão.",
+        "p1": {
+            "title": "1) Ingestão unificada e dinâmica",
+            "description": "Colete sinais de qualquer fonte, normalize e distribua com governança — sem travar no fornecedor.",
+            "bullets": [
+                "Pipeline visual com interface gráfica",
+                "Suporte a OpenTelemetry, Telegraf, Beats",
+                "Agentes proprietários quando necessário"
+            ]
+        },
+        "p2": {
+            "title": "2) Enriquecimento via CMDB",
+            "description": "Telemetria sem contexto vira ruído. Com CMDB, cada sinal ganha significado de negócio.",
+            "bullets": [
+                "Relacionamento serviço → componente → dono → criticidade",
+                "Priorização inteligente de incidentes",
+                "Relatórios e alocação eficiente"
+            ]
+        },
+        "p3": {
+            "title": "3) Análise inteligente (IA/ML/LLMs)",
+            "description": "Detecte padrões, antecipe riscos e gere recomendações acionáveis — com transparência e rastreabilidade.",
+            "bullets": [
+                "Insights preditivos e alertas mais precisos",
+                "Sumários e explicabilidade por contexto",
+                "Playbooks e sugestões de remediação"
+            ]
+        },
+        "ctaDemo": "Agendar demo",
+        "ctaHow": "Ver como funciona"
+    },
+    "howItWorks": {
+        "eyebrow": "Detalhes do fluxo",
+        "title": "Do dado bruto ao diagnóstico com contexto",
+        "description": "Uma arquitetura de observabilidade que respeita o seu ecossistema e melhora continuamente a precisão.",
+        "steps": {
+            "s1": {
+                "title": "Captura e normalização",
+                "desc": "Colete de múltiplas fontes (OTel/Telegraf/Beats/agentes) e normalize em um modelo comum."
+            },
+            "s2": {
+                "title": "Pipeline visual e governança",
+                "desc": "Orquestre rotas, filtros e enriquecimentos com controle de versões e visibilidade do fluxo."
+            },
+            "s3": {
+                "title": "Enriquecimento CMDB + negócio",
+                "desc": "Adicione dono, criticidade, dependências e SLA por serviço — para priorizar com impacto."
+            },
+            "s4": {
+                "title": "Correlação e IA",
+                "desc": "Combine sinais e gere insights: provável causa raiz, padrões e próximos passos recomendados."
+            }
+        },
+        "benefits": {
+            "eyebrow": "Benefícios do CMDB + contexto",
+            "badge": "fluxo 1–4",
+            "b1": {
+                "title": "Priorização inteligente",
+                "desc": "Incidentes deixam de ser “mais um alerta” e passam a ser “impacto no serviço X”."
+            },
+            "b2": {
+                "title": "Alocação eficiente",
+                "desc": "Encaminhamento por dono, criticidade e dependência reduz handoffs e tempo morto."
+            },
+            "b3": {
+                "title": "Relatórios confiáveis",
+                "desc": "Indicadores e custos por serviço e por unidade — com rastreabilidade."
+            }
+        },
+        "card": {
+            "title": "Pronto para reduzir ruído e custo?",
+            "subtitle": "Uma demo focada no seu cenário — sem apresentação genérica.",
+            "cta": "Agendar"
+        },
+        "note": "Nota: CMDB pode integrar com fontes existentes ou ser consolidado com governança progressiva.",
+        "integrations": {
+            "title": "Integrações abertas",
+            "desc": "OpenTelemetry-first, com conectores quando necessário."
+        },
+        "security": {
+            "title": "Segurança e auditoria",
+            "desc": "Governança por fluxo, com rastreabilidade e controles."
+        }
+    },
+    "faq": {
+        "eyebrow": "Perguntas frequentes",
+        "title": "Dúvidas comuns\n(com respostas objetivas)",
+        "description": "Se você está comparando ferramentas ou tentando sair da fragmentação, aqui está o que mais perguntam.",
+        "q1": {
+            "q": "A VERTICE substitui minhas ferramentas atuais?",
+            "a": "Ela pode coexistir e unificar ingestão/correlação, reduzindo redundâncias. O caminho é incremental: integramos, medimos ganhos e então decidimos consolidação com segurança."
+        },
+        "q2": {
+            "q": "Como lida com ambientes híbridos (legado + cloud)?",
+            "a": "Com conectores e agentes (padrões abertos como OpenTelemetry, Telegraf, Beats) e estratégia de normalização. O objetivo é ter um “modelo comum” de sinais, independente da origem."
+        },
+        "q3": {
+            "q": "Qual é o papel do CMDB na observabilidade?",
+            "a": "Ele fornece contexto: dono, criticidade, dependências e impacto de negócio. Isso melhora roteamento, priorização e relatórios — reduzindo tempo perdido com investigação."
+        },
+        "q4": {
+            "q": "IA aqui é “mágica” ou explicável?",
+            "a": "O foco é em insights acionáveis e rastreáveis: correlação, resumo, sugestão de causa e próximos passos com base em contexto e evidências dos sinais."
+        },
+        "q5": {
+            "q": "Como começo sem um projeto longo?",
+            "a": "Com um piloto orientado a resultado: selecionamos serviços críticos, unificamos ingestão, adicionamos contexto e medimos redução de ruído e MTTR em semanas."
+        },
+        "sidebar": {
+            "title": "Vamos desenhar seu “estado futuro”",
+            "text": "Uma conversa técnica para mapear ferramentas, custos, ruído e objetivos. Saia com um plano incremental e mensurável.",
+            "rows": {
+                "r1": {
+                    "title": "Diagnóstico rápido",
+                    "desc": "Identifique onde a fragmentação custa mais."
+                },
+                "r2": {
+                    "title": "Plano de piloto",
+                    "desc": "Metas: ruído, MTTR, custo e governança."
+                },
+                "r3": {
+                    "title": "Próximos passos",
+                    "desc": "Integrações e sucesso mensurável."
+                }
+            },
+            "ctaSchedule": "Agendar agora",
+            "ctaBack": "Rever problema"
+        }
+    },
+    "finalCta": {
+        "title": "Observabilidade que respeita",
+        "highlight": "segurança, contexto e resultado",
+        "text": "Pare de “apagar incêndio” com dados desconexos. Centralize telemetria, conecte com o negócio e use IA para agir antes do impacto.",
+        "ctaDemo": "Agendar demo",
+        "ctaSpecialist": "Falar com especialista",
+        "pills": {
+            "ingestion": {
+                "title": "Ingestão unificada",
+                "desc": "OTel/Telegraf/Beats + conectores"
+            },
+            "cmdb": {
+                "title": "CMDB + contexto",
+                "desc": "Impacto e priorização por serviço"
+            },
+            "ai": {
+                "title": "IA aplicada",
+                "desc": "Insights acionáveis e preditivos"
+            }
+        },
+        "note": "Segurança e observabilidade caminham juntas: visibilidade com governança e decisões rápidas com contexto."
+    },
+    "footer": {
+        "logo": {
+            "subtitle": "Observabilidade centralizada"
+        },
+        "text": "Transformando telemetria em clareza operacional: menos ruído, mais contexto, decisões rápidas e confiáveis.",
+        "backToTop": "Voltar ao topo",
+        "nav": {
+            "title": "Navegação",
+            "links": {
+                "problem": "Problema",
+                "pillars": "Pilares",
+                "howItWorks": "Como funciona",
+                "faq": "FAQ",
+                "privacy": "Privacidade"
+            }
+        },
+        "contact": {
+            "title": "Contato",
+            "site": "Site institucional"
+        },
+        "copyright": "Todos os direitos reservados.",
+        "tags": "Segurança • Confiabilidade • Observabilidade"
+    },
+    "lead": {
+        "heroDemo": {
+            "title": "Agendar uma demo",
+            "subtitle": "Veja a plataforma em ação: ingestão, correlação e insights com IA."
+        },
+        "heroSpecialist": {
+            "title": "Falar com especialista",
+            "subtitle": "Uma conversa técnica e objetiva para mapear ferramentas atuais e ganhos rápidos."
+        },
+        "heroCard": {
+            "title": "Agendar demo",
+            "subtitle": "Uma sessão curta e objetiva, com foco em ganhos rápidos."
+        },
+        "problemMap": {
+            "title": "Mapear seu cenário",
+            "subtitle": "Compartilhe ferramentas atuais e objetivos. Nós sugerimos um caminho técnico e econômico."
+        },
+        "pillarsDemo": {
+            "title": "Agendar demo — Pilares VERTICE",
+            "subtitle": "Vamos mostrar o fluxo completo: ingestão → contexto → correlação → decisão."
+        },
+        "cmdbDemo": {
+            "title": "Agendar demo — CMDB & contexto",
+            "subtitle": "Vamos desenhar o fluxo de contexto e priorização para seu ambiente."
+        },
+        "faqDemo": {
+            "title": "Agendar demo — Próximos passos",
+            "subtitle": "Vamos mapear seu cenário e sugerir um piloto com metas claras."
+        },
+        "finalDemo": {
+            "title": "Agendar demo — VERTICE",
+            "subtitle": "Uma sessão curta, guiada e técnica — com foco em ganhos mensuráveis."
+        },
+        "finalSpecialist": {
+            "title": "Falar com especialista",
+            "subtitle": "Tire dúvidas técnicas e de negócio sobre a plataforma e o modelo de adoção."
+        },
+        "headerDemo": {
+            "title": "Agendar uma demo",
+            "subtitle": "Um walkthrough guiado com foco em resultados: redução de downtime, custos e MTTR."
+        },
+        "headerSpecialist": {
+            "title": "Falar com um especialista",
+            "subtitle": "Conte suas dores: fragmentação, custos, correlação e priorização — a gente organiza o caminho."
+        },
+        "form": {
+            "name": "Nome *",
+            "namePlaceholder": "Seu nome",
+            "email": "E-mail *",
+            "emailPlaceholder": "voce@empresa.com",
+            "company": "Empresa *",
+            "companyPlaceholder": "Nome da empresa",
+            "role": "Cargo (opcional)",
+            "rolePlaceholder": "Ex.: SRE, Infra, TI",
+            "phone": "Telefone (opcional)",
+            "phonePlaceholder": "+55 (11) 9xxxx-xxxx",
+            "source": "Origem",
+            "message": "Mensagem (opcional)",
+            "messagePlaceholder": "Contexto: ferramentas atuais, dores, objetivos, SLAs...",
+            "disclaimer": "Ao enviar, você concorda em receber contato sobre a demo e materiais técnicos.",
+            "submit": "Enviar",
+            "sending": "Enviando..."
+        },
+        "toast": {
+            "validation": {
+                "title": "Confira os campos obrigatórios",
+                "description": "Nome, e-mail e empresa precisam estar preenchidos corretamente."
+            },
+            "success": {
+                "title": "Recebido com sucesso",
+                "description": "Obrigado! Em breve um especialista entrará em contato."
+            },
+            "error": {
+                "title": "Não foi possível enviar",
+                "description": "Tente novamente em instantes."
+            }
+        }
+    }
+}

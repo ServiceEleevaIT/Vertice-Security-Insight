@@ -2,8 +2,10 @@ import * as React from "react";
 import { Container } from "@/components/Container";
 import { Link } from "wouter";
 import { Shield, Mail, Phone, ExternalLink } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function SiteFooter() {
+  const { t } = useTranslation();
   const year = new Date().getFullYear();
 
   const handleToTop = () => {
@@ -12,7 +14,7 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-border/60 bg-background/70 backdrop-blur-xl">
-      <Container className="py-10">
+      <Container className="py-8 sm:py-10">
         <div className="grid gap-10 md:grid-cols-3">
           <div className="space-y-4">
             <div className="inline-flex items-center gap-3">
@@ -22,49 +24,48 @@ export function SiteFooter() {
               <div className="leading-tight">
                 <div className="font-display text-lg">VERTICE</div>
                 <div className="text-xs text-muted-foreground -mt-0.5">
-                  Observabilidade centralizada
+                  {t("footer.logo.subtitle")}
                 </div>
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Transformando telemetria em clareza operacional: menos ruído, mais contexto,
-              decisões rápidas e confiáveis.
+              {t("footer.text")}
             </p>
             <button
               onClick={handleToTop}
               className="text-sm font-semibold text-primary hover:underline"
               data-testid="footer-top"
             >
-              Voltar ao topo
+              {t("footer.backToTop")}
             </button>
           </div>
 
           <div className="space-y-3">
             <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-              Navegação
+              {t("footer.nav.title")}
             </div>
             <div className="grid gap-2 text-sm">
               <Link href="/#problema" className="hover:underline" data-testid="footer-link-problema">
-                Problema
+                {t("footer.nav.links.problem")}
               </Link>
               <Link href="/#pilares" className="hover:underline" data-testid="footer-link-pilares">
-                Pilares
+                {t("footer.nav.links.pillars")}
               </Link>
               <Link href="/#como-funciona" className="hover:underline" data-testid="footer-link-como-funciona">
-                Como funciona
+                {t("footer.nav.links.howItWorks")}
               </Link>
               <Link href="/#faq" className="hover:underline" data-testid="footer-link-faq">
-                FAQ
+                {t("footer.nav.links.faq")}
               </Link>
               <Link href="/privacidade" className="hover:underline" data-testid="footer-link-privacidade">
-                Privacidade
+                {t("footer.nav.links.privacy")}
               </Link>
             </div>
           </div>
 
           <div className="space-y-3">
             <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-              Contato
+              {t("footer.contact.title")}
             </div>
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
@@ -83,7 +84,7 @@ export function SiteFooter() {
                   className="inline-flex items-center gap-2 rounded-xl border border-border/70 bg-card/40 px-3 py-2 text-sm font-semibold text-foreground hover:bg-muted/50 transition-colors"
                   data-testid="footer-external"
                 >
-                  Site institucional <ExternalLink className="h-4 w-4" />
+                  {t("footer.contact.site")} <ExternalLink className="h-4 w-4" />
                 </a>
               </div>
             </div>
@@ -91,8 +92,8 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-border/60 pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <div>© {year} VERTICE. Todos os direitos reservados.</div>
-          <div className="opacity-90">Segurança • Confiabilidade • Observabilidade</div>
+          <div>© {year} VERTICE. {t("footer.copyright")}</div>
+          <div className="opacity-90">{t("footer.tags")}</div>
         </div>
       </Container>
     </footer>
